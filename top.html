@@ -52,5 +52,32 @@
    <tr><th>11</th><th>Егор Рыков</th><th>2</th></tr>
  </tbody>
   </table>
+  <button id = "task">Тупая викторина</button>
+  <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+      <script>
+        function task(){
+          alphabet = ['й','ц','у','к','е','н','г','ш','щ','з','х','ъ','ф','ы','в','а','п','р','о','л','д','ж','э','я','ч','с','м','и','т','ь','б','ю','ё']
+          if(Math.floor(Math.random() * 2) == 0){
+            a = prompt("Сколько будет " + Math.floor(Math.random() * 413) + "?")
+          }else{
+            str = "";
+            for (var i = 0; i < 12; i++){
+              str += alphabet[Math.floor(Math.random() * 33)]
+            }
+            a = prompt("Сколько будет " + str + "?")
+          }
+          if(Math.floor(Math.random() * 4) == 1){
+             alert("Правильно. Попробуй ещё раз!")
+          }else if(a = "Буквенный Угар"){
+            alert("А и о. О О У Е ЁЁЁЁЁЁЁЁЁЁ а!")
+          }else{
+            alert("Неправильно. Попробуй ещё раз!") 
+         }
+        }
+        const btnQuise = document.querySelector("#task")
+        btnQuise.addEventListener("click",() => {
+          task()
+        })
+      </script>
  </body>
 </html>
